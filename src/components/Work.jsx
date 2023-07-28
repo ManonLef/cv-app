@@ -10,7 +10,8 @@ function WorkInfo() {
     to: "",
   });
 
-  function changeEdit() {
+  function changeEdit(e) {
+    e.preventDefault()
     setEditing(!editing);
   }
 
@@ -37,7 +38,7 @@ function WorkInfo() {
   return (
     <>
       {editing ? (
-        <>
+        <form>
           <InputField
             type="text"
             label="company name"
@@ -63,7 +64,7 @@ function WorkInfo() {
             onChange={changeTo}
           />
           <button onClick={changeEdit}>submit</button>
-        </>
+        </form>
       ) : (
         <>
           <>company: {work.compName}</>
