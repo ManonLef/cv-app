@@ -1,5 +1,9 @@
 export default function Header() {
-  const title = "CV Builder"
+  const title = "CV Builder";
 
-  return <header>{title}</header>
+  return (
+    <header>
+      <h1>{title}</h1>
+    </header>
+  );
 }
