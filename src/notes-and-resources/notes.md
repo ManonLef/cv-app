@@ -29,3 +29,4 @@
 ## ideas or features to look into for the future
 - [ ] download pdf / jpeg / or even other file format
 - [ ] add template or theme picker
+- [ ] future future: store in account. Make save file editable for censoring and sharing online

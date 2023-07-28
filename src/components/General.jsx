@@ -55,8 +55,8 @@ export default function GeneralInfo() {
         </>
       ) : (
         <>
-        <p>full name: {personalDetails.firstName} {personalDetails.lastName}</p>
-        <p>email: {personalDetails.email}</p>
+        <>full name: {personalDetails.firstName} {personalDetails.lastName}</>
+        <>email: {personalDetails.email}</>
         <button onClick={changeEdit}>edit</button>
         </>
       )}
