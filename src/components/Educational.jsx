@@ -55,25 +55,31 @@ function EducationalInfo() {
 
 export default function EducationSection() {
   const [counter, setCounter] = useState(1);
-  const [education, setEducation] = useState([{ key: counter }]);
+  const [educationList, setEducationList] = useState([{ key: counter }]);
 
   function addEducation() {
-    const newEducation = [...education];
+    const newEducation = [...educationList];
     const newCount = counter + 1;
     newEducation.push({ key: newCount });
 
     setCounter(newCount);
-    setEducation(newEducation);
+    setEducationList(newEducation);
+  }
+
+  function removeEdu(key) {
+    const newEducationList = educationList.filter((item) => item.key !== key);
+    setEducationList(newEducationList)
   }
 
   return (
     <>
       <h2>Educational Info</h2>
       <div>
-        {education.map((edu) => {
+        {educationList.map((edu) => {
           return (
             <div key={edu.key}>
               <EducationalInfo />
+              <button onClick={() => removeEdu(edu.key)}>remove</button>
             </div>
           );
         })}
