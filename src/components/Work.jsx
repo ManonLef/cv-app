@@ -99,17 +99,17 @@ export default function WorkSection() {
   return (
     <>
       <h2>Company Info</h2>
-      <div>
+      
         {workList.map((work) => {
           return (
-            <div key={work.key}>
+            <div key={work.key} className="form-container">
               <WorkInfo />
               <button onClick={() => removeWork(work.key)} aria-label="remove">remove</button>
             </div>
           );
         })}
-      </div>
-      <button onClick={addWork} aria-label="add work">add work</button>
+      
+      <button onClick={addWork} aria-label="add work">+</button>
     </>
   );
 }

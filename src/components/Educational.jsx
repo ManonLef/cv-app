@@ -75,17 +75,17 @@ export default function EducationSection() {
   return (
     <>
       <h2>Educational Info</h2>
-      <div>
+      
         {educationList.map((edu) => {
           return (
-            <div key={edu.key}>
+            <div key={edu.key} className="form-container">
               <EducationalInfo />
               <button onClick={() => removeEdu(edu.key)} aria-label="remove">remove</button>
             </div>
           );
         })}
-      </div>
-      <button onClick={addEducation} aria-label="add education">add education</button>
+     
+      <button onClick={addEducation} aria-label="add education">+</button>
     </>
   );
 }
