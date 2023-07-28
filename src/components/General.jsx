@@ -4,6 +4,7 @@ import { ReactDOM } from "react";
 import InputField from "./InputField";
 
 export default function GeneralInfo() {
+  const [editing, setEditing] = useState(true);
   const [personalDetails, setPersonalDetails] = useState({
     firstName: "",
     lastName: "",
@@ -25,26 +26,41 @@ export default function GeneralInfo() {
     setPersonalDetails(newDetails);
   }
 
+  function changeEdit() {
+    setEditing(!editing)
+  }
+
   return (
     <>
-      <InputField
-        type="text"
-        label="first name"
-        value={personalDetails.firstName}
-        onChange={changeFirstName}
-      />
-      <InputField
-        type="text"
-        label="last name"
-        value={personalDetails.lastName}
-        onChange={changeLastName}
-      />
-      <InputField
-        type="email"
-        label="email"
-        value={personalDetails.email}
-        onChange={changeMail}
-      />
+      <h2>General information</h2>
+      {editing ? (
+        <>
+          <InputField
+            type="text"
+            label="first name"
+            value={personalDetails.firstName}
+            onChange={changeFirstName}
+          />
+          <InputField
+            type="text"
+            label="last name"
+            value={personalDetails.lastName}
+            onChange={changeLastName}
+          />
+          <InputField
+            type="email"
+            label="email"
+            value={personalDetails.email}
+            onChange={changeMail}
+          />
+          <button onClick={changeEdit}>submit</button>
+        </>
+      ) : (
+        <>
+        <p>not editing</p>
+        <button onClick={changeEdit}>edit</button>
+        </>
+      )}
     </>
   );
 }
