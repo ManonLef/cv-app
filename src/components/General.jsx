@@ -32,7 +32,7 @@ export default function GeneralInfo() {
     <>
       <h2>General information</h2>
       {editing ? (
-        <>
+        <form>
           <InputField
             type="text"
             label="first name"
@@ -52,7 +52,7 @@ export default function GeneralInfo() {
             onChange={changeEmail}
           />
           <button onClick={changeEdit}>submit</button>
-        </>
+        </form>
       ) : (
         <>
         <>full name: {personalDetails.firstName} {personalDetails.lastName}</>
