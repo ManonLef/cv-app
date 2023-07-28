@@ -63,7 +63,7 @@ function WorkInfo() {
             value={work.to}
             onChange={changeTo}
           />
-          <button onClick={changeEdit}>submit</button>
+          <button onClick={changeEdit} aria-label="submit">submit</button>
         </form>
       ) : (
         <>
@@ -71,7 +71,7 @@ function WorkInfo() {
           <>position: {work.position}</>
           <>from: {work.from}</>
           <>to: {work.to}</>
-          <button onClick={changeEdit}>edit</button>
+          <button onClick={changeEdit} aria-label="edit">edit</button>
         </>
       )}
     </>
@@ -104,12 +104,12 @@ export default function WorkSection() {
           return (
             <div key={work.key}>
               <WorkInfo />
-              <button onClick={() => removeWork(work.key)}>remove</button>
+              <button onClick={() => removeWork(work.key)} aria-label="remove">remove</button>
             </div>
           );
         })}
       </div>
-      <button onClick={addWork}>add work</button>
+      <button onClick={addWork} aria-label="add work">add work</button>
     </>
   );
 }

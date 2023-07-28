@@ -41,13 +41,13 @@ function EducationalInfo() {
             value={education.studies}
             onChange={changeStudies}
           />
-          <button onClick={changeEdit}>submit</button>
+          <button onClick={changeEdit} aria-label="submit">submit</button>
         </form>
       ) : (
         <>
           <>school: {education.schoolName}</>
           <>studies: {education.studies}</>
-          <button onClick={changeEdit}>edit</button>
+          <button onClick={changeEdit} aria-label="edit">edit</button>
         </>
       )}
     </>
@@ -80,12 +80,12 @@ export default function EducationSection() {
           return (
             <div key={edu.key}>
               <EducationalInfo />
-              <button onClick={() => removeEdu(edu.key)}>remove</button>
+              <button onClick={() => removeEdu(edu.key)} aria-label="remove">remove</button>
             </div>
           );
         })}
       </div>
-      <button onClick={addEducation}>add education</button>
+      <button onClick={addEducation} aria-label="add education">add education</button>
     </>
   );
 }

@@ -53,7 +53,7 @@ export default function GeneralInfo() {
             value={personalDetails.email}
             onChange={changeEmail}
           />
-          <button onClick={changeEdit}>submit</button>
+          <button onClick={changeEdit} aria-label="submit">submit</button>
         </form>
       ) : (
         <>
@@ -61,7 +61,7 @@ export default function GeneralInfo() {
             full name: {personalDetails.firstName} {personalDetails.lastName}
           </>
           <>email: {personalDetails.email}</>
-          <button onClick={changeEdit}>edit</button>
+          <button onClick={changeEdit} aria-label="edit">edit</button>
         </>
       )}
     </>
