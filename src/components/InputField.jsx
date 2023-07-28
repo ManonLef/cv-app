@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function InputField({type = "text", label, name, value, onChange}) {
 
   return (
