@@ -11,7 +11,7 @@ function WorkInfo() {
   });
 
   function changeEdit(e) {
-    e.preventDefault()
+    e.preventDefault();
     setEditing(!editing);
   }
 
@@ -40,25 +40,25 @@ function WorkInfo() {
       {editing ? (
         <form>
           <InputField
-            type="text"
-            label="company name"
+            name="Company Name"
+            label="compName"
             value={work.compName}
             onChange={changeCompany}
           />
           <InputField
-            type="text"
+            name="Position"
             label="position"
             value={work.position}
             onChange={changePosition}
           />
           <InputField
-            type="text"
+            name="From"
             label="from"
             value={work.from}
             onChange={changeFrom}
           />
           <InputField
-            type="text"
+            name="To"
             label="position"
             value={work.to}
             onChange={changeTo}
@@ -93,7 +93,7 @@ export default function WorkSection() {
 
   function removeWork(key) {
     const newWorkList = workList.filter((item) => item.key !== key);
-    setWorkList(newWorkList)
+    setWorkList(newWorkList);
   }
 
   return (

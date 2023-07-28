@@ -35,18 +35,19 @@ export default function GeneralInfo() {
       {editing ? (
         <form>
           <InputField
-            type="text"
-            label="first name"
+            name="First Name"
+            label="firstName"
             value={personalDetails.firstName}
             onChange={changeFirstName}
           />
           <InputField
-            type="text"
-            label="last name"
+            name="Last Name"
+            label="lastName"
             value={personalDetails.lastName}
             onChange={changeLastName}
           />
           <InputField
+            name="Email"
             type="email"
             label="email"
             value={personalDetails.email}

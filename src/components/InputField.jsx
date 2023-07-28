@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function InputField({type, label, value, onChange}) {
+export default function InputField({type = "text", label, name, value, onChange}) {
 
   return (
     <label htmlFor={label}>
-      {label}:
+      {name + ":"}
       <input
         type={type}
         id={label}

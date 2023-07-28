@@ -11,7 +11,7 @@ function EducationalInfo() {
   });
 
   function changeEdit(e) {
-    e.preventDefault()
+    e.preventDefault();
     setEditing(!editing);
   }
 
@@ -30,13 +30,13 @@ function EducationalInfo() {
       {editing ? (
         <form>
           <InputField
-            type="text"
-            label="school name"
+            name="School Name"
+            label="schoolName"
             value={education.schoolName}
             onChange={changeSchool}
           />
           <InputField
-            type="text"
+            name="Field of Study"
             label="studies"
             value={education.studies}
             onChange={changeStudies}
@@ -69,7 +69,7 @@ export default function EducationSection() {
 
   function removeEdu(key) {
     const newEducationList = educationList.filter((item) => item.key !== key);
-    setEducationList(newEducationList)
+    setEducationList(newEducationList);
   }
 
   return (
