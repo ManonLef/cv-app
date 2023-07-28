@@ -1,6 +1,4 @@
-import React from "react";
 import { useState } from "react";
-import { ReactDOM } from "react";
 import InputField from "./InputField";
 
 export default function GeneralInfo() {
@@ -21,7 +19,7 @@ export default function GeneralInfo() {
     setPersonalDetails(newDetails);
   }
 
-  function changeMail(e) {
+  function changeEmail(e) {
     const newDetails = { ...personalDetails, email: e.target.value };
     setPersonalDetails(newDetails);
   }
@@ -51,13 +49,14 @@ export default function GeneralInfo() {
             type="email"
             label="email"
             value={personalDetails.email}
-            onChange={changeMail}
+            onChange={changeEmail}
           />
           <button onClick={changeEdit}>submit</button>
         </>
       ) : (
         <>
-        <p>not editing</p>
+        <p>full name: {personalDetails.firstName} {personalDetails.lastName}</p>
+        <p>email: {personalDetails.email}</p>
         <button onClick={changeEdit}>edit</button>
         </>
       )}
