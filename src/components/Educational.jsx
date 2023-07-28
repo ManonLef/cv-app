@@ -10,7 +10,8 @@ function EducationalInfo() {
     to: "",
   });
 
-  function changeEdit() {
+  function changeEdit(e) {
+    e.preventDefault()
     setEditing(!editing);
   }
 
@@ -27,7 +28,7 @@ function EducationalInfo() {
   return (
     <>
       {editing ? (
-        <>
+        <form>
           <InputField
             type="text"
             label="school name"
@@ -41,7 +42,7 @@ function EducationalInfo() {
             onChange={changeStudies}
           />
           <button onClick={changeEdit}>submit</button>
-        </>
+        </form>
       ) : (
         <>
           <>school: {education.schoolName}</>

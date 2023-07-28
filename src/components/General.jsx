@@ -24,8 +24,9 @@ export default function GeneralInfo() {
     setPersonalDetails(newDetails);
   }
 
-  function changeEdit() {
-    setEditing(!editing)
+  function changeEdit(e) {
+    e.preventDefault();
+    setEditing(!editing);
   }
 
   return (
@@ -55,9 +56,11 @@ export default function GeneralInfo() {
         </form>
       ) : (
         <>
-        <>full name: {personalDetails.firstName} {personalDetails.lastName}</>
-        <>email: {personalDetails.email}</>
-        <button onClick={changeEdit}>edit</button>
+          <>
+            full name: {personalDetails.firstName} {personalDetails.lastName}
+          </>
+          <>email: {personalDetails.email}</>
+          <button onClick={changeEdit}>edit</button>
         </>
       )}
     </>
