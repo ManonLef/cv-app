@@ -52,26 +52,31 @@ function WorkInfo() {
             onChange={changePosition}
           />
           <InputField
+            type="date"
             name="From"
             label="from"
             value={work.from}
             onChange={changeFrom}
           />
           <InputField
+            type="date"
             name="To"
             label="position"
             value={work.to}
             onChange={changeTo}
           />
-          <button onClick={changeEdit} aria-label="submit">submit</button>
+          <button onClick={changeEdit} aria-label="submit">
+            submit
+          </button>
         </form>
       ) : (
         <>
-          <>company: {work.compName}</>
-          <>position: {work.position}</>
-          <>from: {work.from}</>
-          <>to: {work.to}</>
-          <button onClick={changeEdit} aria-label="edit">edit</button>
+          {work.compName !== "" && <div>{work.compName}</div>}
+          {work.position !== "" && <div>{work.position}</div>}
+          {(work.from !== "" && work.to !== "") && <div>{work.from} - {work.to}</div>}
+          <button onClick={changeEdit} aria-label="edit">
+            edit
+          </button>
         </>
       )}
     </>
@@ -99,17 +104,21 @@ export default function WorkSection() {
   return (
     <>
       <h2>Company Info</h2>
-      
-        {workList.map((work) => {
-          return (
-            <div key={work.key} className="form-container">
-              <WorkInfo />
-              <button onClick={() => removeWork(work.key)} aria-label="remove">remove</button>
-            </div>
-          );
-        })}
-      
-      <button onClick={addWork} aria-label="add work">+</button>
+
+      {workList.map((work) => {
+        return (
+          <div key={work.key} className="form-container">
+            <WorkInfo />
+            <button onClick={() => removeWork(work.key)} aria-label="remove">
+              remove
+            </button>
+          </div>
+        );
+      })}
+
+      <button onClick={addWork} aria-label="add work">
+        +
+      </button>
     </>
   );
 }
