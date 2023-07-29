@@ -57,11 +57,11 @@ export default function GeneralInfo() {
         </form>
       ) : (
         <>
-          <>
-            full name: {personalDetails.firstName} {personalDetails.lastName}
-          </>
-          <>email: {personalDetails.email}</>
-          <button onClick={changeEdit} aria-label="edit">edit</button>
+          <div>Name: {personalDetails.firstName} {personalDetails.lastName}</div>
+          {personalDetails.email !== "" && <div>{personalDetails.email}</div>}
+          <button onClick={changeEdit} aria-label="edit">
+            edit
+          </button>
         </>
       )}
     </>
