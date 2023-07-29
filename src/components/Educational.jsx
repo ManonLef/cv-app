@@ -25,6 +25,16 @@ function EducationalInfo() {
     setEducation(newDetails);
   }
 
+  function changeFrom(e) {
+    const newDetails = { ...education, from: e.target.value };
+    setEducation(newDetails);
+  }
+
+  function changeTo(e) {
+    const newDetails = { ...education, to: e.target.value };
+    setEducation(newDetails);
+  }
+
   return (
     <>
       {editing ? (
@@ -41,14 +51,35 @@ function EducationalInfo() {
             value={education.studies}
             onChange={changeStudies}
           />
-          <button onClick={changeEdit} aria-label="submit">submit</button>
+          <InputField 
+            type="date"
+            name="Date started"
+            label="startDate"
+            value={education.from}
+            onChange={changeFrom}
+          />
+          <InputField 
+            type="date"
+            name="Date finished"
+            label="endDate"
+            value={education.to}
+            onChange={changeTo}
+          />
+          <button onClick={changeEdit} aria-label="submit">
+            submit
+          </button>
         </form>
       ) : (
-        <>
-          <>school: {education.schoolName}</>
-          <>studies: {education.studies}</>
-          <button onClick={changeEdit} aria-label="edit">edit</button>
-        </>
+        <div className="education">
+          {education.schoolName !== "" && (
+            <div>school: {education.schoolName}</div>
+          )}
+          {education.studies !== "" && <div>studies: {education.studies}</div>}
+          {(education.from !== "" && education.to !== "") && <div>{education.from} - {education.to}</div>}
+          <button onClick={changeEdit} aria-label="edit">
+            edit
+          </button>
+        </div>
       )}
     </>
   );
@@ -75,17 +106,21 @@ export default function EducationSection() {
   return (
     <>
       <h2>Educational Info</h2>
-      
-        {educationList.map((edu) => {
-          return (
-            <div key={edu.key} className="form-container">
-              <EducationalInfo />
-              <button onClick={() => removeEdu(edu.key)} aria-label="remove">remove</button>
-            </div>
-          );
-        })}
-     
-      <button onClick={addEducation} aria-label="add education">+</button>
+
+      {educationList.map((edu) => {
+        return (
+          <div key={edu.key}>
+            <EducationalInfo />
+            <button onClick={() => removeEdu(edu.key)} aria-label="remove">
+              remove
+            </button>
+          </div>
+        );
+      })}
+
+      <button onClick={addEducation} aria-label="add education">
+        +
+      </button>
     </>
   );
 }
