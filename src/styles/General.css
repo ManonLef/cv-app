@@ -1,0 +1,11 @@
+.general {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.general button {
+  width: fit-content;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
