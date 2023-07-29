@@ -5,18 +5,18 @@
   - [x] name
   - [x] email
   - [x] phone
-- [ ] section to add educational experience
-  - [ ] school name
-  - [ ] title of studies
-  - [ ] date of studies
-- [ ] job experience
-  - [ ] company name
-  - [ ] position title
-  - [ ] main responsibilities
-  - [ ] date from and until employed
-- [ ] edit and submit button for each section
-- [ ] submit should submit your form and display the value of your input fields in HTML elements
-- [ ] edit should return the input fields/form elements including previously entered value
+- [x] section to add educational experience
+  - [x] school name
+  - [x] title of studies
+  - [x] date of studies
+- [x] job experience
+  - [x] company name
+  - [x] position title
+  - [x] main responsibilities
+  - [x] date from and until employed
+- [x] edit and submit button for each section
+- [x] submit should submit your form and display the value of your input fields in HTML elements
+- [x] edit should return the input fields/form elements including previously entered value
 - [x] create a `components` directory under your `src` directory
 - [x] create a `styles` directory under your `src` directory
 
