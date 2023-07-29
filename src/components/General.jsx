@@ -39,7 +39,7 @@ export default function GeneralInfo() {
     <>
       <h2>General information</h2>
       {editing ? (
-        <form>
+        <form className="general">
           <InputField
             name="First Name"
             label="firstName"
@@ -71,11 +71,11 @@ export default function GeneralInfo() {
           </button>
         </form>
       ) : (
-        <>
+        <div className="general">
           {(personalDetails.firstName !== "" ||
             personalDetails.lastName !== "") && (
             <div>
-              Name: {personalDetails.firstName} {personalDetails.lastName}
+              {personalDetails.firstName} {personalDetails.lastName}
             </div>
           )}
           {personalDetails.email !== "" && <div>{personalDetails.email}</div>}
@@ -83,10 +83,8 @@ export default function GeneralInfo() {
           <button onClick={changeEdit} aria-label="edit">
             edit
           </button>
-        </>
+        </div>
       )}
     </>
   );
 }
-
-// edit mode? show forms with submit button. Else: show html info with edit button
