@@ -39,7 +39,7 @@ export default function GeneralInfo() {
     <>
       <h2>General information</h2>
       {editing ? (
-        <form className="general">
+        <form>
           <InputField
             name="First Name"
             label="firstName"
