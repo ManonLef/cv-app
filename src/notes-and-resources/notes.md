@@ -1,10 +1,10 @@
 # Notes on the CV application
 
 ## Requirements
-- [ ] section to add general information
-  - [ ] name
-  - [ ] email
-  - [ ] phone
+- [x] section to add general information
+  - [x] name
+  - [x] email
+  - [x] phone
 - [ ] section to add educational experience
   - [ ] school name
   - [ ] title of studies
@@ -26,7 +26,13 @@
   - [ ] gather inspiration from site like linkedin, common cv designs etc.
   - my to-do does this toggle thing as well. might have to simplify it here though as in: state submitted? then display only html with edit button, otherwise, display form with submit button.
 
+### 2023-07-29
+- most of the sections are in place
+- I don't think I want to add validation just yet. People can use the fields whichever way they want. It might be useful for later if I for example add social handles to generate a link in pdf for example
+- validation will be out of scope for this project
+
 ## ideas or features to look into for the future
 - [ ] download pdf / jpeg / or even other file format
 - [ ] add template or theme picker
 - [ ] future future: store in account. Make save file editable for censoring and sharing online
+- [ ] add a social media section right below the general information section
