@@ -8,6 +8,7 @@ function WorkInfo() {
     position: "",
     from: "",
     to: "",
+    responsibilities: "",
   });
 
   function changeEdit(e) {
@@ -32,6 +33,11 @@ function WorkInfo() {
 
   function changeTo(e) {
     const newDetails = { ...work, to: e.target.value };
+    setWork(newDetails);
+  }
+
+  function changeResponsibilities(e) {
+    const newDetails = { ...work, responsibilities: e.target.value };
     setWork(newDetails);
   }
 
@@ -65,6 +71,7 @@ function WorkInfo() {
             value={work.to}
             onChange={changeTo}
           />
+          <label htmlFor="responsibilities">Responsibilities:<textarea name="Responsibilities" id="responsibilities" onChange={changeResponsibilities} value={work.responsibilities}></textarea></label>
           <button onClick={changeEdit} aria-label="submit">
             submit
           </button>
@@ -73,7 +80,12 @@ function WorkInfo() {
         <>
           {work.compName !== "" && <div>{work.compName}</div>}
           {work.position !== "" && <div>{work.position}</div>}
-          {(work.from !== "" && work.to !== "") && <div>{work.from} - {work.to}</div>}
+          {work.from !== "" && work.to !== "" && (
+            <div>
+              {work.from} - {work.to}
+            </div>
+          )}
+          {work.responsibilities !== "" && <div>{work.responsibilities}</div>}
           <button onClick={changeEdit} aria-label="edit">
             edit
           </button>
