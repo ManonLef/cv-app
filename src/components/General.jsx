@@ -7,6 +7,7 @@ export default function GeneralInfo() {
     firstName: "",
     lastName: "",
     email: "",
+    phone: "",
   });
 
   function changeFirstName(e) {
@@ -21,6 +22,11 @@ export default function GeneralInfo() {
 
   function changeEmail(e) {
     const newDetails = { ...personalDetails, email: e.target.value };
+    setPersonalDetails(newDetails);
+  }
+
+  function changePhone(e) {
+    const newDetails = { ...personalDetails, phone: e.target.value };
     setPersonalDetails(newDetails);
   }
 
@@ -53,12 +59,27 @@ export default function GeneralInfo() {
             value={personalDetails.email}
             onChange={changeEmail}
           />
-          <button onClick={changeEdit} aria-label="submit">submit</button>
+          <InputField
+            name="Phone"
+            type="tel"
+            label="phone"
+            value={personalDetails.phone}
+            onChange={changePhone}
+          />
+          <button onClick={changeEdit} aria-label="submit">
+            submit
+          </button>
         </form>
       ) : (
         <>
-          <div>Name: {personalDetails.firstName} {personalDetails.lastName}</div>
+          {(personalDetails.firstName !== "" ||
+            personalDetails.lastName !== "") && (
+            <div>
+              Name: {personalDetails.firstName} {personalDetails.lastName}
+            </div>
+          )}
           {personalDetails.email !== "" && <div>{personalDetails.email}</div>}
+          {personalDetails.phone !== "" && <div>{personalDetails.phone}</div>}
           <button onClick={changeEdit} aria-label="edit">
             edit
           </button>
