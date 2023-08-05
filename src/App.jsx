@@ -1,5 +1,3 @@
-import "./styles/App.css";
-import "./styles/General.css";
 import GeneralInfo from "./components/General";
 import EducationSection from "./components/Educational";
 import WorkSection from "./components/Work";

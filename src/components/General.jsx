@@ -39,7 +39,7 @@ export default function GeneralInfo() {
     <>
       <h2>General information</h2>
       {editing ? (
-        <form>
+        <form className="w-full max-w-sm">
           <InputField
             name="First Name"
             label="firstName"

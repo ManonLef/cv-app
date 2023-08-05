@@ -38,7 +38,7 @@ function EducationalInfo() {
   return (
     <>
       {editing ? (
-        <form>
+        <form className="w-full max-w-sm">
           <InputField
             name="School Name"
             label="schoolName"

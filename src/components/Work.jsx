@@ -44,7 +44,7 @@ function WorkInfo() {
   return (
     <>
       {editing ? (
-        <form>
+        <form className="w-full max-w-sm">
           <InputField
             name="Company Name"
             label="compName"
@@ -71,7 +71,20 @@ function WorkInfo() {
             value={work.to}
             onChange={changeTo}
           />
-          <label htmlFor="responsibilities">Responsibilities:<textarea name="Responsibilities" id="responsibilities" onChange={changeResponsibilities} value={work.responsibilities}></textarea></label>
+          <div className="md:flex md:items-center mb-6 gap-2">
+            <div className="md:w-1/3">
+              <label htmlFor="responsibilities" className="block text-gray-500 font-bold md:text-left mb-1 md:mb-0 pr-4">Responsibilities:</label>
+            </div>
+            <div className="md:w-2/3">
+              <textarea
+              className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-pink-500"
+                name="Responsibilities"
+                id="responsibilities"
+                onChange={changeResponsibilities}
+                value={work.responsibilities}></textarea>
+            </div>
+          </div>
+
           <button onClick={changeEdit} aria-label="submit">
             submit
           </button>
