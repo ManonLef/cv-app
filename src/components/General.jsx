@@ -39,7 +39,7 @@ export default function GeneralInfo() {
   return (
     <>
       <HeaderTwo text="General Information" />
-      <div className="w-full max-w-xl bg-white shadow-md rounded p-6 mb-4">
+      <div className="w-full max-w-xl bg-white shadow-md rounded p-6 mb-4 bg-opacity-25">
         {editing ? (
           <form>
             <InputField

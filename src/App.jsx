@@ -7,7 +7,7 @@ import "./index.css"
 
 function App() {
   return (
-    <div className="grid grid-rows-3 bg-slate-200">
+    <div className="grid grid-rows-3 tracking-wider bg-gradient-to-br from-fuchsia-600 to-purple-600">
       <Header />
       <div className=" gap-2 text-gray-800 mx-8 mb-8">
         <GeneralInfo />
