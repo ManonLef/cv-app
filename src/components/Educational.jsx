@@ -39,7 +39,7 @@ function EducationalInfo() {
   return (
     <>
       {editing ? (
-        <form className="w-full max-w-xl bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <form>
           <InputField
             name="School Name"
             label="schoolName"
@@ -66,12 +66,12 @@ function EducationalInfo() {
             value={education.to}
             onChange={changeTo}
           />
-          <button onClick={changeEdit} aria-label="submit">
+          <button className="w-full bg-transparent hover:bg-emerald-500 text-emerald-700 font-semibold hover:text-white py-1 px-4 border-2 border-emerald-500 hover:border-transparent rounded" onClick={changeEdit} aria-label="submit">
             submit
           </button>
         </form>
       ) : (
-        <div className="w-full max-w-xl bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <div>
           {education.schoolName !== "" && (
             <div>school: {education.schoolName}</div>
           )}
@@ -110,7 +110,7 @@ export default function EducationSection() {
 
       {educationList.map((edu) => {
         return (
-          <div key={edu.key}>
+          <div className="w-full max-w-xl bg-white shadow-md rounded p-6 mb-4" key={edu.key}>
             <EducationalInfo />
             <button onClick={() => removeEdu(edu.key)} aria-label="remove">
               remove

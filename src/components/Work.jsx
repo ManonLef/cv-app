@@ -45,7 +45,7 @@ function WorkInfo() {
   return (
     <>
       {editing ? (
-        <form className="w-full max-w-xl bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <form>
           <InputField
             name="Company Name"
             label="compName"
@@ -78,7 +78,7 @@ function WorkInfo() {
             </div>
             <div className="md:w-2/3">
               <textarea
-              className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-pink-500"
+              className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-emerald-500"
                 name="Responsibilities"
                 id="responsibilities"
                 onChange={changeResponsibilities}
@@ -86,12 +86,12 @@ function WorkInfo() {
             </div>
           </div>
 
-          <button onClick={changeEdit} aria-label="submit">
+          <button className="w-full bg-transparent hover:bg-emerald-500 text-emerald-700 font-semibold hover:text-white py-1 px-4 border-2 border-emerald-500 hover:border-transparent rounded" onClick={changeEdit} aria-label="submit">
             submit
           </button>
         </form>
       ) : (
-        <div className="w-full max-w-xl bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <div>
           {work.compName !== "" && <div>{work.compName}</div>}
           {work.position !== "" && <div>{work.position}</div>}
           {work.from !== "" && work.to !== "" && (
@@ -133,7 +133,7 @@ export default function WorkSection() {
 
       {workList.map((work) => {
         return (
-          <div key={work.key} className="form-container">
+          <div key={work.key} className="w-full max-w-xl bg-white shadow-md rounded p-6 mb-4">
             <WorkInfo />
             <button onClick={() => removeWork(work.key)} aria-label="remove">
               remove
@@ -142,7 +142,7 @@ export default function WorkSection() {
         );
       })}
 
-      <button onClick={addWork} aria-label="add work">
+      <button onClick={addWork} aria-label="add work" className="mb-8">
         +
       </button>
     </>

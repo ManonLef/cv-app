@@ -38,54 +38,59 @@ export default function GeneralInfo() {
 
   return (
     <>
-      <HeaderTwo text="General Information"/>
-      {editing ? (
-        <form className="w-full max-w-xl bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-          <InputField
-            name="First Name"
-            label="firstName"
-            value={personalDetails.firstName}
-            onChange={changeFirstName}
-          />
-          <InputField
-            name="Last Name"
-            label="lastName"
-            value={personalDetails.lastName}
-            onChange={changeLastName}
-          />
-          <InputField
-            name="Email"
-            type="email"
-            label="email"
-            value={personalDetails.email}
-            onChange={changeEmail}
-          />
-          <InputField
-            name="Phone"
-            type="tel"
-            label="phone"
-            value={personalDetails.phone}
-            onChange={changePhone}
-          />
-          <button onClick={changeEdit} aria-label="submit">
-            submit
-          </button>
-        </form>
-      ) : (
-        <div className="w-full max-w-xl bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-          {(personalDetails.firstName !== "" ||
-            personalDetails.lastName !== "") && (
-            <div>
-              {personalDetails.firstName} {personalDetails.lastName}
-            </div>
-          )}
-          {personalDetails.email !== "" && <div>{personalDetails.email}</div>}
-          {personalDetails.phone !== "" && <div>{personalDetails.phone}</div>}
-          <button onClick={changeEdit} aria-label="edit">
-            edit
-          </button>
-        </div>
-      )}
+      <HeaderTwo text="General Information" />
+      <div className="w-full max-w-xl bg-white shadow-md rounded p-6 mb-4">
+        {editing ? (
+          <form>
+            <InputField
+              name="First Name"
+              label="firstName"
+              value={personalDetails.firstName}
+              onChange={changeFirstName}
+            />
+            <InputField
+              name="Last Name"
+              label="lastName"
+              value={personalDetails.lastName}
+              onChange={changeLastName}
+            />
+            <InputField
+              name="Email"
+              type="email"
+              label="email"
+              value={personalDetails.email}
+              onChange={changeEmail}
+            />
+            <InputField
+              name="Phone"
+              type="tel"
+              label="phone"
+              value={personalDetails.phone}
+              onChange={changePhone}
+            />
+            <button
+              className="w-full bg-transparent hover:bg-emerald-500 text-emerald-700 font-semibold hover:text-white py-1 px-4 border-2 border-emerald-500 hover:border-transparent rounded"
+              onClick={changeEdit}
+              aria-label="submit">
+              submit
+            </button>
+          </form>
+        ) : (
+          <div>
+            {(personalDetails.firstName !== "" ||
+              personalDetails.lastName !== "") && (
+              <div>
+                {personalDetails.firstName} {personalDetails.lastName}
+              </div>
+            )}
+            {personalDetails.email !== "" && <div>{personalDetails.email}</div>}
+            {personalDetails.phone !== "" && <div>{personalDetails.phone}</div>}
+            <button onClick={changeEdit} aria-label="edit">
+              edit
+            </button>
+          </div>
+        )}
+      </div>
     </>
   );
 }
