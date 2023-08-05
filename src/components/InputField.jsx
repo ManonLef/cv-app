@@ -3,7 +3,7 @@ export default function InputField({type = "text", label, name, value, onChange}
   return (
     <div className="md:flex md:items-center mb-6 gap-2">
       <div className="md:w-1/3">
-        <label htmlFor={label} className="block text-gray-500 font-bold md:text-left mb-1 md:mb-0 pr-4">
+        <label htmlFor={label} className="block text-gray-700 md:text-left mb-1 md:mb-0 pr-4">
           {name + ":"}</label></div>
           <div className="md:w-2/3">
             <input

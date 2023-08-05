@@ -44,7 +44,7 @@ function WorkInfo() {
   return (
     <>
       {editing ? (
-        <form className="w-full max-w-sm">
+        <form className="w-full max-w-xl bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
           <InputField
             name="Company Name"
             label="compName"
