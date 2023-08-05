@@ -1,5 +1,6 @@
 import { useState } from "react";
 import InputField from "./InputField";
+import HeaderTwo from "./HeaderTwo";
 
 function WorkInfo() {
   const [editing, setEditing] = useState(true);
@@ -90,7 +91,7 @@ function WorkInfo() {
           </button>
         </form>
       ) : (
-        <>
+        <div className="w-full max-w-xl bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
           {work.compName !== "" && <div>{work.compName}</div>}
           {work.position !== "" && <div>{work.position}</div>}
           {work.from !== "" && work.to !== "" && (
@@ -102,7 +103,7 @@ function WorkInfo() {
           <button onClick={changeEdit} aria-label="edit">
             edit
           </button>
-        </>
+        </div>
       )}
     </>
   );
@@ -128,7 +129,7 @@ export default function WorkSection() {
 
   return (
     <>
-      <h2>Company Info</h2>
+      <HeaderTwo text="Work Experience"/>
 
       {workList.map((work) => {
         return (

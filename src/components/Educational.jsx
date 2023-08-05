@@ -1,5 +1,6 @@
 import { useState } from "react";
 import InputField from "./InputField";
+import HeaderTwo from "./HeaderTwo";
 
 function EducationalInfo() {
   const [editing, setEditing] = useState(true);
@@ -70,7 +71,7 @@ function EducationalInfo() {
           </button>
         </form>
       ) : (
-        <div className="education">
+        <div className="w-full max-w-xl bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
           {education.schoolName !== "" && (
             <div>school: {education.schoolName}</div>
           )}
@@ -105,7 +106,7 @@ export default function EducationSection() {
 
   return (
     <>
-      <h2>Educational Info</h2>
+      <HeaderTwo text="Education"/>
 
       {educationList.map((edu) => {
         return (

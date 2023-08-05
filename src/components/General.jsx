@@ -1,5 +1,6 @@
 import { useState } from "react";
 import InputField from "./InputField";
+import HeaderTwo from "./HeaderTwo";
 
 export default function GeneralInfo() {
   const [editing, setEditing] = useState(true);
@@ -37,7 +38,7 @@ export default function GeneralInfo() {
 
   return (
     <>
-      <h2>General information</h2>
+      <HeaderTwo text="General Information"/>
       {editing ? (
         <form className="w-full max-w-xl bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
           <InputField
@@ -71,7 +72,7 @@ export default function GeneralInfo() {
           </button>
         </form>
       ) : (
-        <div className="general">
+        <div className="w-full max-w-xl bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
           {(personalDetails.firstName !== "" ||
             personalDetails.lastName !== "") && (
             <div>
