@@ -82,7 +82,7 @@ function WorkInfo() {
           {work.position !== "" && <div>{work.position}</div>}
           {work.from !== "" && work.to !== "" && (
             <div>
-              {work.from} - {work.to}
+              from {work.from} to {work.to}
             </div>
           )}
           {work.responsibilities !== "" && <div>{work.responsibilities}</div>}

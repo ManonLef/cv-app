@@ -75,7 +75,7 @@ function EducationalInfo() {
             <div>school: {education.schoolName}</div>
           )}
           {education.studies !== "" && <div>studies: {education.studies}</div>}
-          {(education.from !== "" && education.to !== "") && <div>{education.from} - {education.to}</div>}
+          {(education.from !== "" && education.to !== "") && <div>from {education.from} to {education.to}</div>}
           <button onClick={changeEdit} aria-label="edit">
             edit
           </button>
