@@ -31,8 +31,17 @@
 - I don't think I want to add validation just yet. People can use the fields whichever way they want. It might be useful for later if I for example add social handles to generate a link in pdf for example
 - validation will be out of scope for this project
 
+### 2023-08-05
+- had a little break due to school holiday
+- Current things that still seem left to do:
+- [ ] output date in style from- to
+- [ ] add some styling
+
 ## ideas or features to look into for the future
 - [ ] download pdf / jpeg / or even other file format
 - [ ] add template or theme picker
+- [ ] future: session storage or local storage with reset function
 - [ ] future future: store in account. Make save file editable for censoring and sharing online
 - [ ] add a social media section right below the general information section
+- [ ] edit to more friendly date output
+- [ ] add max and min dates
