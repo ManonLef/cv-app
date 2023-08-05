@@ -22,7 +22,6 @@ export default function InputField(props) {
   );
 }
 
-// added to remove 
 InputField.propTypes = {
   type: PropTypes.string,
   label: PropTypes.string,
