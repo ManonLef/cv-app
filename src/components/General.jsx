@@ -76,7 +76,7 @@ export default function GeneralInfo() {
             </button>
           </form>
         ) : (
-          <div>
+          <div className="text-white">
             {(personalDetails.firstName !== "" ||
               personalDetails.lastName !== "") && (
               <div>
@@ -85,7 +85,7 @@ export default function GeneralInfo() {
             )}
             {personalDetails.email !== "" && <div>{personalDetails.email}</div>}
             {personalDetails.phone !== "" && <div>{personalDetails.phone}</div>}
-            <button onClick={changeEdit} aria-label="edit">
+            <button onClick={changeEdit} aria-label="edit" className="text-white bg-white bg-opacity-20 font-semibold hover:text-white py-1 px-4 rounded hover:bg-white hover:text-purple-500">
               edit
             </button>
           </div>

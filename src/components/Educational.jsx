@@ -118,17 +118,17 @@ export default function EducationSection() {
       {educationList.map((edu) => {
         return (
           <div
-            className="w-full max-w-xl flex flex-col gap-2 bg-white shadow-md rounded p-6 mb-4 bg-opacity-25 text-white bg-opacity-10 "
+            className="w-full max-w-xl flex flex-col gap-2 bg-white shadow-md rounded p-6 mb-4 bg-opacity-25 text-white"
             key={edu.key}>
             <EducationalInfo />
-            <button onClick={() => removeEdu(edu.key)} aria-label="remove" className="text-white bg-white bg-opacity-20 font-semibold hover:text-white py-1 px-4 rounded hover:bg-white hover:text-purple-500">
+            <button onClick={() => removeEdu(edu.key)} aria-label="remove" className="text-white bg-white bg-opacity-20 font-semibold py-1 px-4 rounded hover:bg-white hover:text-purple-500">
               remove education
             </button>
           </div>
         );
       })}
 
-      <button onClick={addEducation} aria-label="add education" className="text-white bg-white bg-opacity-20 hover:text-white py-1 px-4  rounded hover:border-transparent hover:bg-white hover:text-purple-500">
+      <button onClick={addEducation} aria-label="add education" className="text-white bg-white bg-opacity-20 py-1 px-4  rounded hover:border-transparent hover:bg-white hover:text-purple-500">
         + add education
       </button>
     </>
