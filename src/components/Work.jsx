@@ -90,7 +90,10 @@ function WorkInfo() {
             </div>
           </div>
 
-          <button className="w-full text-white bg-white bg-opacity-20 font-semibold hover:text-white py-1 px-4 border-2 rounded border-white hover:border-transparent hover:bg-white hover:text-purple-500">
+          <button
+            onClick={changeEdit}
+            aria-label="submit"
+            className="w-full text-white bg-white bg-opacity-20 font-semibold py-1 px-4 border-2 rounded border-white hover:border-transparent hover:bg-white hover:text-purple-500">
             submit
           </button>
         </form>
@@ -107,7 +110,7 @@ function WorkInfo() {
           <button
             onClick={changeEdit}
             aria-label="edit"
-            className="text-white bg-white bg-opacity-20 font-semibold hover:text-white py-1 px-4 rounded hover:bg-white hover:text-purple-500">
+            className="text-white bg-white bg-opacity-20 font-semibold py-1 px-4 rounded hover:bg-white hover:text-purple-500">
             edit
           </button>
         </div>
@@ -154,7 +157,10 @@ export default function WorkSection() {
         );
       })}
 
-      <button onClick={addWork} aria-label="add work" className="text-white bg-white bg-opacity-20 py-1 px-4  rounded hover:border-transparent hover:bg-white hover:text-purple-500">
+      <button
+        onClick={addWork}
+        aria-label="add work"
+        className="text-white bg-white bg-opacity-20 py-1 px-4  rounded hover:border-transparent hover:bg-white hover:text-purple-500">
         + add work
       </button>
     </>
