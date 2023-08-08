@@ -1,11 +1,12 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 export default function InputField(props) {
-
   return (
     <div className="md:flex md:items-center mb-6 gap-2">
       <div className="md:w-1/3">
-        <label htmlFor={props.label} className="block text-white md:text-left mb-1 md:mb-0 pr-4">
+        <label
+          htmlFor={props.label}
+          className="block text-white md:text-left mb-1 md:mb-0 pr-4">
           {props.name + ":"}
         </label>
       </div>
@@ -28,8 +29,8 @@ InputField.propTypes = {
   name: PropTypes.string,
   value: PropTypes.any,
   onChange: PropTypes.any,
-}
+};
 
 InputField.defaultProps = {
-  type: "text"
-}
+  type: "text",
+};

@@ -69,7 +69,7 @@ export default function GeneralInfo() {
               onChange={changePhone}
             />
             <button
-              className="w-full text-white bg-white bg-opacity-20 font-semibold hover:text-white py-1 px-4 border-2 rounded border-white hover:border-transparent hover:bg-white hover:text-purple-500"
+              className="w-full text-white bg-white bg-opacity-20 font-semibold py-1 px-4 border-2 rounded border-white hover:border-transparent hover:bg-white hover:text-purple-500"
               onClick={changeEdit}
               aria-label="submit">
               submit
@@ -85,7 +85,10 @@ export default function GeneralInfo() {
             )}
             {personalDetails.email !== "" && <div>{personalDetails.email}</div>}
             {personalDetails.phone !== "" && <div>{personalDetails.phone}</div>}
-            <button onClick={changeEdit} aria-label="edit" className="text-white bg-white bg-opacity-20 font-semibold hover:text-white py-1 px-4 rounded hover:bg-white hover:text-purple-500">
+            <button
+              onClick={changeEdit}
+              aria-label="edit"
+              className="text-white bg-white bg-opacity-20 font-semibold py-1 px-4 rounded hover:bg-white hover:text-purple-500">
               edit
             </button>
           </div>
