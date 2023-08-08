@@ -1,6 +1,7 @@
 # CV Builder
 
 ## Result
+[Try the CV Builder live here](https://cv-app-sepia.vercel.app)
 ![Preview of my Procrasti-Not app](./src/notes-and-resources/preview.png)
 
 ## About this project
