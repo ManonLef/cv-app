@@ -69,7 +69,7 @@ export default function GeneralInfo() {
               onChange={changePhone}
             />
             <button
-              className="w-full bg-transparent hover:bg-emerald-500 text-emerald-700 font-semibold hover:text-white py-1 px-4 border-2 border-emerald-500 hover:border-transparent rounded"
+              className="w-full text-white bg-white bg-opacity-20 font-semibold hover:text-white py-1 px-4 border-2 rounded border-white hover:border-transparent hover:bg-white hover:text-purple-500"
               onClick={changeEdit}
               aria-label="submit">
               submit
