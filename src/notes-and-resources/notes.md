@@ -23,7 +23,7 @@
 ### 2023-07-26
 - added all the base files and notes. 
 - Some initial ideas up front:
-  - [ ] gather inspiration from site like linkedin, common cv designs etc.
+  - [x] gather inspiration from site like linkedin, common cv designs etc.
   - my to-do does this toggle thing as well. might have to simplify it here though as in: state submitted? then display only html with edit button, otherwise, display form with submit button.
 
 ### 2023-07-29
