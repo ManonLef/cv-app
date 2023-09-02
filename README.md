@@ -8,15 +8,20 @@
 This project is the first project for practicing React. I decided to use this project to test Tailwind as well. What a joy!
 
 ## Project Objectives:
-- The Inbox will be the default project
-- New Projects can be made
-- New tasks can be created inside the selected project
-- After creation, The names of both the tasks and projects can be changed by double clicking them
-- All projects and tasks can be deleted by clicking on their corresponding bin (they will be gone without warning for now though so be careful)
-- A default setup of projects and tasks will be loaded upon first usage of the app
-- Changing the priority can be done by clicking on said priority
-- Changing the date can only be done by clicking on the calendar edit icon
-- Tasks are sorted by incomplete first, then by due-date
+- Add a section for general information 
+  - name
+  - email
+  - phone
+- Add a section for education experience
+  - school
+  - title
+  - date
+- add a section for practical experience
+  - company
+  - position
+  - responsibilities
+  - dates
+- edit and submit buttons with edit remembering values
 
 ## Objectives
 - [x] A section to add general information like name, email and phone number.
@@ -40,3 +45,4 @@ Setting up TailWind and playing around with it was something I had on my list fo
 - [ ] An updating CV on the right side of the page 
 - [ ] Add form validation (left it out for now since this will most likely not add to my React skills or progress)
 - [ ] Printable or downloadable CV
+- [ ] Add storage
