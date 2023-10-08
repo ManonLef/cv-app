@@ -16,24 +16,11 @@ function EducationalInfo() {
     setEditing(!editing);
   }
 
-  function changeSchool(e) {
-    const newDetails = { ...education, schoolName: e.target.value };
-    setEducation(newDetails);
-  }
-
-  function changeStudies(e) {
-    const newDetails = { ...education, studies: e.target.value };
-    setEducation(newDetails);
-  }
-
-  function changeFrom(e) {
-    const newDetails = { ...education, from: e.target.value };
-    setEducation(newDetails);
-  }
-
-  function changeTo(e) {
-    const newDetails = { ...education, to: e.target.value };
-    setEducation(newDetails);
+  function changeHandler(e) {
+    setEducation({
+      ...education,
+      [e.target.id]: e.target.value
+    })
   }
 
   return (
@@ -44,27 +31,27 @@ function EducationalInfo() {
             name="School Name"
             label="schoolName"
             value={education.schoolName}
-            onChange={changeSchool}
+            onChange={changeHandler}
           />
           <InputField
             name="Field of Study"
             label="studies"
             value={education.studies}
-            onChange={changeStudies}
+            onChange={changeHandler}
           />
           <InputField
             type="date"
             name="Date started"
-            label="startDate"
+            label="from"
             value={education.from}
-            onChange={changeFrom}
+            onChange={changeHandler}
           />
           <InputField
             type="date"
             name="Date finished"
-            label="endDate"
+            label="to"
             value={education.to}
-            onChange={changeTo}
+            onChange={changeHandler}
           />
           <button
             className="w-full text-white bg-white bg-opacity-20 font-semibold py-1 px-4 border-2 rounded border-white hover:border-transparent hover:bg-white hover:text-purple-500"
