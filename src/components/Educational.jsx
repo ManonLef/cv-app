@@ -19,8 +19,8 @@ function EducationalInfo() {
   function changeHandler(e) {
     setEducation({
       ...education,
-      [e.target.id]: e.target.value
-    })
+      [e.target.id]: e.target.value,
+    });
   }
 
   return (

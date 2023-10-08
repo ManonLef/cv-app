@@ -12,7 +12,6 @@ export default function GeneralInfo() {
   });
 
   function changeHandler(e) {
-    console.log(e.target.value, e.target.id);
     setPersonalDetails({
       ...personalDetails,
       [e.target.id]: e.target.value,
