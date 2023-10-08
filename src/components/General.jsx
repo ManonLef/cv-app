@@ -11,24 +11,12 @@ export default function GeneralInfo() {
     phone: "",
   });
 
-  function changeFirstName(e) {
-    const newDetails = { ...personalDetails, firstName: e.target.value };
-    setPersonalDetails(newDetails);
-  }
-
-  function changeLastName(e) {
-    const newDetails = { ...personalDetails, lastName: e.target.value };
-    setPersonalDetails(newDetails);
-  }
-
-  function changeEmail(e) {
-    const newDetails = { ...personalDetails, email: e.target.value };
-    setPersonalDetails(newDetails);
-  }
-
-  function changePhone(e) {
-    const newDetails = { ...personalDetails, phone: e.target.value };
-    setPersonalDetails(newDetails);
+  function changeHandler(e) {
+    console.log(e.target.value, e.target.id)
+    setPersonalDetails({
+      ...personalDetails,
+      [e.target.id]: e.target.value
+    })
   }
 
   function changeEdit(e) {
@@ -46,27 +34,27 @@ export default function GeneralInfo() {
               name="First Name"
               label="firstName"
               value={personalDetails.firstName}
-              onChange={changeFirstName}
+              onChange={changeHandler}
             />
             <InputField
               name="Last Name"
               label="lastName"
               value={personalDetails.lastName}
-              onChange={changeLastName}
+              onChange={changeHandler}
             />
             <InputField
               name="Email"
               type="email"
               label="email"
               value={personalDetails.email}
-              onChange={changeEmail}
+              onChange={changeHandler}
             />
             <InputField
               name="Phone"
               type="tel"
               label="phone"
               value={personalDetails.phone}
-              onChange={changePhone}
+              onChange={changeHandler}
             />
             <button
               className="w-full text-white bg-white bg-opacity-20 font-semibold py-1 px-4 border-2 rounded border-white hover:border-transparent hover:bg-white hover:text-purple-500"
