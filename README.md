@@ -2,7 +2,7 @@
 
 ## Result
 [Try the CV Builder live here](https://cv-app-sepia.vercel.app)
-![Preview of my Procrasti-Not app](./src/notes-and-resources/preview.png)
+![Preview of the CV builder](./src/notes-and-resources/preview.png)
 
 ## About this project
 This project is the first project for practicing React. I decided to use this project to test Tailwind as well. What a joy!
