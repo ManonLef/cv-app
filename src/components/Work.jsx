@@ -17,29 +17,11 @@ function WorkInfo() {
     setEditing(!editing);
   }
 
-  function changeCompany(e) {
-    const newDetails = { ...work, compName: e.target.value };
-    setWork(newDetails);
-  }
-
-  function changePosition(e) {
-    const newDetails = { ...work, position: e.target.value };
-    setWork(newDetails);
-  }
-
-  function changeFrom(e) {
-    const newDetails = { ...work, from: e.target.value };
-    setWork(newDetails);
-  }
-
-  function changeTo(e) {
-    const newDetails = { ...work, to: e.target.value };
-    setWork(newDetails);
-  }
-
-  function changeResponsibilities(e) {
-    const newDetails = { ...work, responsibilities: e.target.value };
-    setWork(newDetails);
+  function changeHandler(e) {
+    setWork({
+      ...work,
+      [e.target.id]: e.target.value,
+    });
   }
 
   return (
@@ -50,27 +32,27 @@ function WorkInfo() {
             name="Company Name"
             label="compName"
             value={work.compName}
-            onChange={changeCompany}
+            onChange={changeHandler}
           />
           <InputField
             name="Position"
             label="position"
             value={work.position}
-            onChange={changePosition}
+            onChange={changeHandler}
           />
           <InputField
             type="date"
             name="From"
             label="from"
             value={work.from}
-            onChange={changeFrom}
+            onChange={changeHandler}
           />
           <InputField
             type="date"
             name="To"
-            label="position"
+            label="to"
             value={work.to}
-            onChange={changeTo}
+            onChange={changeHandler}
           />
           <div className="md:flex md:items-center mb-6 gap-2">
             <div className="md:w-1/3">
@@ -85,7 +67,7 @@ function WorkInfo() {
                 className="appearance-none opacity-70 border-2 border-slate-200 rounded w-full py-1 px-4 text-gray-700 leading-tight focus:outline-none focus:opacity-100 focus:border-purple-600"
                 name="Responsibilities"
                 id="responsibilities"
-                onChange={changeResponsibilities}
+                onChange={changeHandler}
                 value={work.responsibilities}></textarea>
             </div>
           </div>
